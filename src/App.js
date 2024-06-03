@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Header from './components/Header';
+import Card from './components/Card.jsx';
+import Notes from './components/Notes.jsx';
+import Footer from './components/Footer.jsx';
+import contacts from './components/contacts.jsx';
 
-function App() {
+
+
+
+function App(){
+ console.log(contacts);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header/>,
+      <Card 
+      name={contacts[0].name}
+      img={contacts[0].imgURL}
+      phone={contacts[0].phone}git 
+      email={contacts[0].email}/>,
+
+      <Card name={contacts[1].name}
+      img={contacts[1].imgURL}
+      phone={contacts[1].phone}
+      email={contacts[1].email} />,
+
+<Card name={contacts[2].name}
+      img={contacts[2].imgURL}
+      phone={contacts[2].phone}
+      email={contacts[2].email}/>
+      
+      <Notes/>,
+    <Footer/>
+
     </div>
-  );
+    
+
+  )
 }
+
 
 export default App;
